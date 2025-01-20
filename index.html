@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDay Travel Consult - Your Trusted Travel Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .home-section {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .logo {
+            width: 200px; /* Adjust logo width */
+            margin-bottom: 20px; /* Add margin below the logo */
+        }
+        .service-container {
+            border: 1px solid #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="OneDay Travel Consult Logo" class="logo">
+                <span class="company-name">OneDay Travel Consult</span>
+                <span class="company-tagline">#Travel.Live.Experience</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#credentials">Credentials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="home-section">
+        <div class="overlay">
+            <h1>ONE DAY TRAVEL CONSULT</h1>
+            <p>Your journey begins with us.</p>
+            <div class="service-container">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>✈️ Air Ticketing</li>
+                    <li>🛂 Passport Application</li>
+                    <li>🛃 Visa Application</li>
+                    <li>💼 Job Offers</li>
+                    <li>🎓 Study Abroad</li>
+                    <li>🏨 Hotel Reservations</li>
+                </ul>
+            </div>
+            <button class="cta-button">Book a Consultation</button>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission-vision" class="section">
+        <div class="mission-parallax">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mission-box">
+                        <div class="content-box">
+                            <div class="icon-box">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h2>Our Mission</h2>
+                            <p>To provide exceptional travel experiences that transform lives, foster cultural understanding, 
+                            and create lasting memories. We are committed to delivering personalized service that exceeds 
+                            expectations while promoting sustainable and responsible tourism.</p>
+                            <div class="highlight-points">
+                                <div class="point">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Personalized Travel Solutions</span>
+                                </div>
+                                <div class="point">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Cultural Enrichment</span>
+                                </div>
+                                <div class="point">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Sustainable Tourism</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 vision-box">
+                        <div class="content-box">
+                            <div class="icon-box">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h2>Our Vision</h2>
+                            <p>To be the leading travel consultancy that revolutionizes the way people experience the world. 
+                            We aspire to create a global community of travelers who embrace cultural diversity, sustainable practices, 
+                            and meaningful connections through their journeys.</p>
+                            <div class="highlight-points">
+                                <div class="point">
+                                    <i class="fas fa-star"></i>
+                                    <span>Industry Leadership</span>
+                                </div>
+                                <div class="point">
+                                    <i class="fas fa-star"></i>
+                                    <span>Global Community Building</span>
+                                </div>
+                                <div class="point">
+                                    <i class="fas fa-star"></i>
+                                    <span>Innovative Travel Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Our CEO</h2>
+                    <div class="ceo-profile">
+                        <div class="ceo-image-container">
+                            <img src="images/ceo.jpg" alt="Benedict Nana Owusu - CEO" class="ceo-image">
+                        </div>
+                        <h3>Benedict Nana Owusu</h3>
+                        <p class="position">Founder & CEO</p>
+                        <p class="bio">
+                            With over 8 years of experience in the travel and tourism industry, Benedict is a visionary leader 
+                            and entrepreneur passionate about creating personalized travel experiences. Their expertise spans 
+                            itinerary planning, destination management, corporate travel solutions, job offer processing, 
+                            and sustainable tourism.
+                        </p>
+                        <p class="achievements">
+                            Under Benedict's leadership, One Day Travel Consult has become a trusted name in the industry, 
+                            known for customer satisfaction, innovative travel solutions, and sustainable experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="secretary-info">
+                            <h4>Executive Secretary</h4>
+                            <p>Abigail Ankapong Arthur</p>
+                            <p><i class="fas fa-phone"></i> +233 54 336 0054</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-route"></i>
+                        <h3>Itinerary Planning</h3>
+                        <p>Customized travel plans tailored to your preferences</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Corporate Travel</h3>
+                        <p>Comprehensive business travel management solutions</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Job Offer Processing</h3>
+                        <p>Professional assistance with travel-related job opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section">
+        <div class="container">
+            <h2>Book Your Travel</h2>
+            <div class="booking-form">
+                <form id="travelBookingForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="destination" class="form-label">Destination</label>
+                                <input type="text" class="form-control" id="destination" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dates" class="form-label">Travel Dates</label>
+                                <input type="date" class="form-control" id="dates" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Special Requirements</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="section">
+        <div class="container">
+            <h2>Credentials</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="certificate">
+                        <h3>Certificate</h3>
+                        <img src="images/certificate.jpg" alt="Certificate" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="flyer">
+                        <h3>Flyer</h3>
+                        <img src="images/flyer.jpg" alt="Flyer" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>One Day Travel Consult</h4>
+                    <p>#Travel.Live.Experience</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                        <li><a href="#credentials">Credentials</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> +233 54 336 0054<br>
+                        <i class="fas fa-envelope"></i> info@onedaytravelconsult.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-80px'; // Hide navbar
+            } else {
+                navbar.style.top = '0'; // Show navbar
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

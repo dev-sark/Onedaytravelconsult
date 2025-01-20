@@ -1,0 +1,718 @@
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #333333;
+    --accent-color: #gold;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Adjust padding for spacing */
+    background-color: rgba(26, 26, 26, 0.9);
+    transition: all 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    flex: 0 1 auto; /* Allow the logo to maintain its size */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar-brand .logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.navbar-brand .company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #FFD700, #FFA500, #FF8C00);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 4s ease infinite, fadeInOut 4s infinite;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.navbar-brand .company-tagline {
+    font-size: 1rem;
+    color: #FFD700;
+    opacity: 0;
+    margin-left: 10px;
+    font-style: italic;
+    animation: fadeInOut 4s infinite;
+    animation-delay: 2s;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar-brand .logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Space items evenly */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px; /* Add margin between nav items */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    margin-top: -76px;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* About Section */
+.ceo-image-container {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 30px;
+    position: relative;
+    border-radius: 50%;
+    padding: 12px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.ceo-image-container:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ceo-image-container:hover:after {
+    opacity: 0.5;
+}
+
+.ceo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+.ceo-image-container:hover .ceo-image {
+    transform: scale(1.02);
+}
+
+.ceo-profile {
+    text-align: center;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ceo-profile:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+}
+
+.ceo-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.ceo-profile h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+    font-weight: 700;
+}
+
+.position {
+    color: #FFA500;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.bio {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.achievements {
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+    position: relative;
+    padding: 1rem;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Services Section */
+.service-card {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-container {
+    background-color: transparent; /* No background */
+    border: 1px solid transparent; /* Optional border for visibility */
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.service-container h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add margin below the heading */
+}
+
+ul {
+    display: flex;
+    justify-content: center; /* Center the list items */
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    list-style-type: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    width: 100%;
+}
+
+ul li {
+    margin: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1 1 200px; /* Increase base width for list items */
+}
+
+/* Booking Form */
+.booking-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 3rem 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.mission-parallax {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/mission-bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+}
+
+.content-box:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.icon-box i {
+    font-size: 35px;
+    color: white;
+}
+
+#mission-vision h2 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+#mission-vision p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.highlight-points {
+    margin-top: 30px;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.point:hover {
+    transform: translateX(10px);
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.point i {
+    color: #FFD700;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.point span {
+    color: #444;
+    font-weight: 500;
+}
+
+/* Credentials Section */
+.credentials-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.credential-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.credential-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.credential-header {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.credential-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent);
+    pointer-events: none;
+}
+
+.certificate-container,
+.flyer-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    aspect-ratio: 4/3;
+}
+
+.certificate-image,
+.flyer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.certificate-overlay,
+.flyer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certificate-container:hover .certificate-overlay,
+.flyer-container:hover .flyer-overlay {
+    opacity: 1;
+}
+
+.certificate-container:hover .certificate-image,
+.flyer-container:hover .flyer-image {
+    transform: scale(1.05);
+}
+
+.btn-view {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-view:hover {
+    transform: scale(1.05);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: white;
+    border: none;
+}
+
+.modal-body {
+    padding: 30px;
+    background: #f8f9fa;
+}
+
+.modal-body img {
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: contain;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* New Credentials Section */
+#credentials {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#credentials h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.certificate, .flyer {
+    margin: 10px 0;
+}
+
+.certificate img, .flyer img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Homepage Section */
+#home {
+    background-image: url('images/company-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+#home .overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(128, 128, 128, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px; /* Reduce top padding to move heading up */
+}
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 10px; /* Add some margin for spacing */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; /* Ensure text color is white for visibility */
+}
+
+#home p {
+    font-size: 24px;
+    margin-bottom: 5px; /* Reduce margin to bring it closer to the button */
+}
+
+#home .cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#home .cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .mission-box, .vision-box {
+        margin-bottom: 30px;
+    }
+    
+    .content-box {
+        padding: 30px;
+    }
+    
+    #mission-vision h2 {
+        font-size: 2rem;
+    }
+    
+    .ceo-image-container {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .ceo-profile {
+        padding: 1.5rem;
+    }
+    
+    .ceo-profile h3 {
+        font-size: 1.75rem;
+    }
+    
+    .certificate-image,
+    .flyer-image {
+        height: 200px;
+    }
+    
+    .credential-header i {
+        font-size: 2rem;
+    }
+    
+    .credential-header h3 {
+        font-size: 1.25rem;
+    }
+}
