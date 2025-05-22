@@ -48,24 +48,50 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="OneDay Travel Consult Logo" class="logo">
-                <span class="company-name">OneDay Travel Consult</span>
-                <span class="company-tagline">#Travel.Live.Experience</span>
+            <a class="navbar-brand" href="#home">
+                <img src="images/logo.png" alt="OneDay Travel Consult Logo" height="50">
+                OneDay Travel
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#booking">Book Now</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#credentials">Credentials</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#about">Company Profile</a></li>
+                            <li><a class="dropdown-item" href="#team">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#destinations">Destinations</a></li>
+                            <li><a class="dropdown-item" href="#packages">Travel Packages</a></li>
+                            <li><a class="dropdown-item" href="#booking">Book Now</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#contact">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="#support">Support</a></li>
+                            <li><a class="dropdown-item" href="#faq">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="login.html">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -217,29 +243,96 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section">
+    <section id="services" class="section services-section">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="row">
+            <div class="section-header text-center">
+                <img src="images/logo.png" alt="OneDay Travel Consult Logo" class="services-logo">
+                <h2>Our Services</h2>
+                <p>Experience world-class travel services tailored just for you</p>
+            </div>
+            <div class="row g-4">
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="fas fa-route"></i>
-                        <h3>Itinerary Planning</h3>
-                        <p>Customized travel plans tailored to your preferences</p>
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Flight Booking</h3>
+                        <p>Get the best deals on international and domestic flights with our expert booking service.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Best price guarantee</li>
+                            <li><i class="fas fa-check"></i> 24/7 support</li>
+                            <li><i class="fas fa-check"></i> Flexible booking options</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card featured">
+                        <div class="service-icon">
+                            <i class="fas fa-hotel"></i>
+                        </div>
+                        <h3>Hotel Reservations</h3>
+                        <p>Find and book your perfect accommodation from our curated selection of hotels worldwide.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Luxury to budget options</li>
+                            <li><i class="fas fa-check"></i> Special corporate rates</li>
+                            <li><i class="fas fa-check"></i> Instant confirmation</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="fas fa-building"></i>
-                        <h3>Corporate Travel</h3>
-                        <p>Comprehensive business travel management solutions</p>
+                        <div class="service-icon">
+                            <i class="fas fa-passport"></i>
+                        </div>
+                        <h3>Visa Assistance</h3>
+                        <p>Expert guidance through the visa application process for hassle-free travel.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Document preparation</li>
+                            <li><i class="fas fa-check"></i> Application support</li>
+                            <li><i class="fas fa-check"></i> Status tracking</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="service-card">
-                        <i class="fas fa-file-alt"></i>
-                        <h3>Job Offer Processing</h3>
-                        <p>Professional assistance with travel-related job opportunities</p>
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Tour Packages</h3>
+                        <p>Carefully crafted tour packages for unforgettable travel experiences.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Customized itineraries</li>
+                            <li><i class="fas fa-check"></i> Local guides</li>
+                            <li><i class="fas fa-check"></i> Group discounts</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Transportation</h3>
+                        <p>Reliable ground transportation services for seamless travel experiences.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Airport transfers</li>
+                            <li><i class="fas fa-check"></i> Car rentals</li>
+                            <li><i class="fas fa-check"></i> Chauffeur services</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h3>Travel Insurance</h3>
+                        <p>Comprehensive travel insurance for your peace of mind while traveling.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Medical coverage</li>
+                            <li><i class="fas fa-check"></i> Trip cancellation</li>
+                            <li><i class="fas fa-check"></i> Lost baggage protection</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -247,62 +340,506 @@
     </section>
 
     <!-- Booking Section -->
-    <section id="booking" class="section">
-        <div class="container">
-            <h2>Book Your Travel</h2>
-            <div class="booking-form">
-                <form id="travelBookingForm">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" required>
+    <section id="booking" class="section booking-section">
+        <div class="booking-overlay">
+            <div class="container">
+                <h2 class="text-white">Book Your Travel Experience</h2>
+                <p class="text-center mb-4 text-white">Fill out the form below and our travel experts will contact you within 24 hours.</p>
+                <div class="booking-form">
+                    <form id="travelBookingForm" class="needs-validation" novalidate>
+                        <div class="row g-4">
+                            <!-- Personal Information -->
+                            <div class="col-md-6">
+                                <div class="form-card">
+                                    <h4><i class="fas fa-user"></i> Personal Information</h4>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="whatsapp" class="form-label">WhatsApp Number (if different)</label>
+                                        <input type="tel" class="form-control" id="whatsapp">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
+
+                            <!-- Travel Details -->
+                            <div class="col-md-6">
+                                <div class="form-card">
+                                    <h4><i class="fas fa-plane"></i> Travel Details</h4>
+                                    <div class="mb-3">
+                                        <label for="destination" class="form-label">Desired Destination *</label>
+                                        <input type="text" class="form-control" id="destination" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="departureDate" class="form-label">Departure Date *</label>
+                                                <input type="date" class="form-control" id="departureDate" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="returnDate" class="form-label">Return Date</label>
+                                                <input type="date" class="form-control" id="returnDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="travelPurpose" class="form-label">Purpose of Travel *</label>
+                                        <select class="form-select" id="travelPurpose" required>
+                                            <option value="">Select purpose...</option>
+                                            <option value="tourism">Tourism</option>
+                                            <option value="business">Business</option>
+                                            <option value="education">Education</option>
+                                            <option value="job">Job Opportunity</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" class="form-control" id="phone" required>
+
+                            <!-- Additional Information -->
+                            <div class="col-12">
+                                <div class="form-card">
+                                    <h4><i class="fas fa-info-circle"></i> Additional Information</h4>
+                                    <div class="mb-3">
+                                        <label for="travelers" class="form-label">Number of Travelers *</label>
+                                        <input type="number" class="form-control" id="travelers" min="1" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="budget" class="form-label">Estimated Budget (USD)</label>
+                                        <input type="number" class="form-control" id="budget" min="0">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Special Requirements or Questions</label>
+                                        <textarea class="form-control" id="message" rows="4" placeholder="Tell us about any special requirements, questions, or preferences you have..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Submit -->
+                            <div class="col-12">
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to be contacted by One Day Travel Consult regarding my travel inquiry *
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                                    <i class="fas fa-paper-plane"></i> Submit Booking Request
+                                </button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="destination" class="form-label">Destination</label>
-                                <input type="text" class="form-control" id="destination" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="dates" class="form-label">Travel Dates</label>
-                                <input type="date" class="form-control" id="dates" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Special Requirements</label>
-                                <textarea class="form-control" id="message" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Booking Request</button>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Credentials Section -->
-    <section id="credentials" class="section">
+    <!-- Featured Destinations -->
+    <section id="destinations" class="section destinations-section">
         <div class="container">
-            <h2>Credentials</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="certificate">
-                        <h3>Certificate</h3>
-                        <img src="images/certificate.jpg" alt="Certificate" />
+            <h2>Featured Destinations</h2>
+            <p class="text-center mb-4">Explore our handpicked destinations that will make your travel dreams come true</p>
+            <div class="row g-4" id="destinationsGallery">
+                <!-- Example destination with image -->
+                <div class="col-md-4">
+                    <div class="destination-card">
+                        <div class="destination-media">
+                            <img src="images/placeholder.jpg" alt="Sample Destination" class="img-fluid">
+                            <span class="media-type-badge">
+                                <i class="fas fa-image"></i> Photo
+                            </span>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Beautiful Destination</h3>
+                            <p>Experience the beauty and culture of this amazing location.</p>
+                            <div class="price">From $999</div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Example destination with video -->
+                <div class="col-md-4">
+                    <div class="destination-card">
+                        <div class="destination-media">
+                            <video controls>
+                                <source src="videos/sample-destination.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <span class="media-type-badge">
+                                <i class="fas fa-video"></i> Video
+                            </span>
+                        </div>
+                        <div class="destination-info">
+                            <h3>Amazing Experience</h3>
+                            <p>Watch this video to see what awaits you.</p>
+                            <div class="price">From $1,299</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Destination Card (Admin Only) -->
+                <div class="col-md-4 admin-only">
+                    <div class="destination-card add-destination">
+                        <div class="add-destination-content">
+                            <i class="fas fa-plus-circle"></i>
+                            <h3>Add New Destination</h3>
+                            <p>Click to add a new destination</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>What Our Clients Say</h2>
+                <p>Real experiences from our valued customers</p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <!-- Main Reviews Carousel -->
+                <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card">
+                                <div class="testimonial-image">
+                                    <img src="images/testimonials/user1.jpg" alt="Client 1">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">"OneDay Travel Consult made our dream vacation a reality! Their attention to detail and personalized service exceeded our expectations. The visa assistance was particularly helpful."</p>
+                                    <h4>Sarah Johnson</h4>
+                                    <span class="destination">Trip to Paris</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-image">
+                                    <img src="images/testimonials/user2.jpg" alt="Client 2">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">"Professional team that goes above and beyond. They helped us plan our corporate retreat and everything was perfect. Great attention to detail!"</p>
+                                    <h4>Michael Chen</h4>
+                                    <span class="destination">Corporate Retreat in Bali</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <div class="testimonial-image">
+                                    <img src="images/testimonials/user3.jpg" alt="Client 3">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <p class="testimonial-text">"The best travel agency I've ever worked with! Their hotel recommendations were spot on and they got us amazing deals. Will definitely use their services again!"</p>
+                                    <h4>Emma Thompson</h4>
+                                    <span class="destination">Family Trip to Dubai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Review Stats -->
+                <div class="review-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Destinations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Satisfaction</div>
+                    </div>
+                </div>
+
+                <!-- Add Review Button -->
+                <div class="text-center mt-5">
+                    <button class="btn btn-primary add-review-btn" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                        <i class="fas fa-pen"></i> Share Your Experience
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Share Your Experience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label class="form-label">Your Rating</label>
+                            <div class="rating-input">
+                                <i class="far fa-star" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Destination</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Your Review</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Upload Photo (Optional)</label>
+                            <input type="file" class="form-control" accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Contact Us</h2>
+                <p>We're here to help with your travel needs</p>
+            </div>
+            
+            <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="flyer">
-                        <h3>Flyer</h3>
-                        <img src="images/flyer.jpg" alt="Flyer" />
+                    <div class="contact-info-card">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-details">
+                                <h4>Customer Support</h4>
+                                <p>
+                                    <a href="tel:+233543360054">+233 54 336 0054</a><br>
+                                    <a href="tel:+233555915442">+233 555 915 442</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-headset"></i>
+                            <div class="contact-details">
+                                <h4>Technical Support</h4>
+                                <p>
+                                    <a href="tel:+233543360054">+233 54 336 0054</a><br>
+                                    <a href="tel:+233555915442">+233 555 915 442</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:info@onedaytravelconsult.com">info@onedaytravelconsult.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <h4>Visit Us</h4>
+                                <p>123 Travel Street, Accra, Ghana</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="social-media-section">
+                            <h4>Connect With Us</h4>
+                            <div class="social-links">
+                                <a href="https://wa.me/233543360054" target="_blank" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp 1</span>
+                                </a>
+                                <a href="https://wa.me/233555915442" target="_blank" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp 2</span>
+                                </a>
+                                <a href="https://facebook.com/onedaytravelconsult" target="_blank" class="social-link facebook">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook</span>
+                                </a>
+                                <a href="https://twitter.com/onedaytravel" target="_blank" class="social-link twitter">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="https://snapchat.com/add/bonana_1" target="_blank" class="social-link snapchat">
+                                    <i class="fab fa-snapchat-ghost"></i>
+                                    <span>Snapchat</span>
+                                </a>
+                                <a href="https://tiktok.com/@onedaytravel" target="_blank" class="social-link tiktok">
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>TikTok</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="contact-form-card">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control">
+                                    <option value="">Select Inquiry Type</option>
+                                    <option value="booking">Booking Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions from our valued customers</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How do I book a flight or hotel through your service?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can book through our website or contact our support team at +233 555 915 442. We'll guide you through the process and help you find the best deals.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What documents do I need for visa assistance?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Required documents typically include your passport, photographs, bank statements, employment letter, and travel itinerary. Our team will provide a detailed checklist based on your destination.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is your cancellation policy?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our cancellation policy varies depending on the service and provider. Generally, cancellations made 24-48 hours before the service date are eligible for a refund. Contact our support team for specific details.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Do you offer travel insurance?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer comprehensive travel insurance packages that cover medical emergencies, trip cancellations, and lost baggage. Our team can help you choose the best coverage for your needs.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Can you arrange airport transfers?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we provide reliable airport transfer services. You can book in advance, and our team will ensure a smooth pickup and drop-off experience at your destination.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -324,7 +861,7 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#booking">Book Now</a></li>
-                        <li><a href="#credentials">Credentials</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
